@@ -35,16 +35,16 @@ In this lab, you will be guided through the following tasks:
     **Name**:
 
     ```bash
-    <copy>heatwave-genai</copy>
+    <copy>turbo</copy>
     ```
-    
+
     **Description**:
 
     ```bash
-    <copy>Compartment for HeatWave GenAI</copy>
+    <copy>Compartment for Turbocharge</copy>
     ```
 
-5. Click **Create Compartment**.
+4. Click **Create Compartment**.
 
     ![Create a compartment](./images/2-create-compartment.png "Create a compartment")
 
@@ -54,7 +54,7 @@ In this lab, you will be guided through the following tasks:
 
     ![Select VCN](./images/3-select-vcn.png "Select VCN")
 
-2. Under **Compartment**, select **heatwave-genai**, and Click **Start VCN Wizard**.
+2. Under **Compartment**, select **turbo**, and Click **Start VCN Wizard**.
 
     ![Start VCN Wizard](./images/4-start-vcn-wizard.png "Start VCN Wizard ")
 
@@ -65,10 +65,10 @@ In this lab, you will be guided through the following tasks:
 4. Under **Basic information**, provide a **VCN name**:
 
     ```bash
-    <copy>heatwave-genai-vcn</copy>
+    <copy>heatwave-vcn</copy>
     ```
 
- 5. Ensure that **heatwave-genai** compartment is selected, and click **Next**.
+5. Ensure that **turbo** compartment is selected, and click **Next**.
 
     ![VCN configuration](./images/6-create-vcn-internet-connectivity.png "VCN configuration")
 
@@ -82,15 +82,15 @@ In this lab, you will be guided through the following tasks:
 
 ## Task 3: Configure security list to allow incoming connections
 
-1. On the **heatwave-genai-vcn** page, under **Subnets**, click  **private subnet-heatwave-genai-vcn**.
+1. On the **heatwave-vcn** page, under **Subnets**, click  **private subnet-heatwave-vcn**.
 
-     ![Show subnet details](./images/9-heatwave-genai-vcn-subnets.png "Show subnet details")
+     ![Show subnet details](./images/9-heatwave-vcn-subnets.png "Show subnet details")
 
-2. On **private subnet-heatwave-genai-vcn** page, under **Security**, click  **security list for private subnet-heatwave-vcn**.
+2. On **private subnet-heatwave-vcn** page, under **Security**, click  **security list for private subnet-heatwave-vcn**.
 
     ![Select security lists](./images/10-select-security-list.png "Select security lists")
 
-3. On the **security list for private subnet-heatwave-genai-vcn** page, under **Ingress Rules**, click **Add Ingress Rules**.
+3. On the **security list for private subnet-heatwave-vcn** page, under **Ingress Rules**, click **Add Ingress Rules**.
 
     ![Add ingress rules](./images/11-add-ingress-rules.png "Add ingress rules")
 
@@ -110,7 +110,7 @@ In this lab, you will be guided through the following tasks:
 
     ![Ingress rules](./images/12-enter-ingress-rules.png "Ingress rules")
 
-5. On **security list for private subnet-heatwave-genai-vcn** page, the new ingress rules are shown under **Ingress Rules**.
+5. On **security list for private subnet-heatwave-vcn** page, the new ingress rules are shown under **Ingress Rules**.
 
     ![New ingress rules](./images/13-new-ingress-rules.png "New ingress rules")
 
@@ -120,19 +120,19 @@ In this lab, you will be guided through the following tasks:
 
     ![Select VCN](./images/3-select-vcn.png "Select VCN")
 
-2. Under **Compartment**, ensure **heatwave-genai** is selected, and click the VCN you created, **heatwave-genai-vcn**.
+2. Under **Compartment**, ensure **turbo** is selected, and click the VCN you created, **heatwave-vcn**.
 
     ![Select VCN](./images/14-select-vcn.png "Select VCN")
 
-3. On the **heatwave-genai-vcn** page, under **Subnets**, click  **public subnet-heatwave-genai-vcn**.
+3. On the **heatwave-vcn** page, under **Subnets**, click  **public subnet-heatwave-vcn**.
 
     ![Select public subnet](./images/15-public-subnet.png "Select public subnet")
 
-4. Under **Security**, click **Default Security List for heatwave-genai-vcn**.
+4. Under **Security**, click **Default Security List for heatwave-vcn**.
 
     ![Default security list](./images/16-default-security-list.png "Default security list")
 
-5. On **Default Security List for heatwave-genai-vcn** page, under **Ingress Rules**, click **Add Ingress Rules**.
+5. On **Default Security List for heatwave-vcn** page, under **Ingress Rules**, click **Add Ingress Rules**.
 
     ![Add ingress rules in default security list](./images/17-add-ingress-rules-default-security-list.png "Add ingress rules in default security list")
 
@@ -152,35 +152,35 @@ In this lab, you will be guided through the following tasks:
 
     ![Ingress rules](./images/18-enter-ingess-rules-default-security-list.png "Ingress rules") 
 
-7. On **Default Security List for heatwave-genai-vcn** page, the new ingress rules are shown under **Ingress Rules**.
+7. On **Default Security List for heatwave-vcn** page, the new ingress rules are shown under **Ingress Rules**.
 
     ![New ingress rules](./images/19-new-ingress-rules-default-security-list.png "New ingress rules")
 
 ## Task 5: Create a HeatWave instance
 
 1. Click the **Navigation menu** in the upper left, navigate to **Databases**, and under **HeatWave MySQL**, select **DB Systems**.
-    
+
     ![Select HeatWave DB System](./images/20-select-heatwave-db-system.png "Select HeatWave DB System")
 
-2. Ensure that **heatwave-genai** compartment is selected, and click **Create DB system**.
+2. Ensure that **turbo** compartment is selected, and click **Create DB system**.
 
     ![Create DB system](./images/21-create-dbs.png "Create DB system")
 
 3. In the **Create DB system** panel, select **Development or testing**.
 
-4. Under **Create in compartment**, ensure **heatwave-genai** is selected, and enter a name for the DB system.
+4. Under **Create in compartment**, ensure **turbo** is selected, and enter a name for the DB system.
 
   **Name**:
 
     ```bash
-    <copy>heatwave-genai-dbs</copy>
+    <copy>heatwave-db</copy>
     ```
 
 5. Enter the administrator credentials. *Note* the administrator credentials as you will need them to connect to the DB system. 
 
     ![HeatWave DB system details](./images/22-create-dbs-admin.png "HeatWave DB system details")
 
-6. Select **Standalone** instance, and select the VCN, **heatwave-genai-vcn**, and private subnet, **private subnet-heatwave-genai-vcn**, which you created earlier.
+6. Select **Standalone** instance, and select the VCN, **heatwave-vcn**, and private subnet, **private subnet-heatwave-vcn**, which you created earlier.
 
    ![Configure networking](./images/23-configure-networking.png "Configure networking")
 
@@ -221,7 +221,7 @@ In this lab, you will be guided through the following tasks:
     **Hostname**:
 
     ```bash
-    <copy>heatwave-genai-dbs</copy>
+    <copy>heatwave-db</copy>
     ```
 
     ![HeatWave hostname](./images/32-heatwave-hostname.png "HeatWave hostname")

@@ -90,11 +90,15 @@ In this lab, you will be guided through the following tasks:
 
     ![Select security lists](./images/10-select-security-list.png "Select security lists")
 
-3. On the **security list for private subnet-heatwave-vcn** page, under **Ingress Rules**, click **Add Ingress Rules**.
+3. Click  **security list for private subnet-mysql-vcn**.
+
+    ![Select security lists](./images/11-select-security-list.png "Select security lists")
+
+4. On the **security list for private subnet-heatwave-vcn** page, under **Ingress Rules**, click **Add Ingress Rules**.
 
     ![Add ingress rules](./images/11-add-ingress-rules.png "Add ingress rules")
 
-4. On **Add Ingress Rules** panel, enter the following, and click **Add Ingress Rules**:
+5. On **Add Ingress Rules** panel, enter the following, and click **Add Ingress Rules**:
 
     **Source CIDR**:
 
@@ -110,7 +114,7 @@ In this lab, you will be guided through the following tasks:
 
     ![Ingress rules](./images/12-enter-ingress-rules.png "Ingress rules")
 
-5. On **security list for private subnet-heatwave-vcn** page, the new ingress rules are shown under **Ingress Rules**.
+6. On **security list for private subnet-heatwave-vcn** page, the new ingress rules are shown under **Ingress Rules**.
 
     ![New ingress rules](./images/13-new-ingress-rules.png "New ingress rules")
 
@@ -124,19 +128,31 @@ In this lab, you will be guided through the following tasks:
 
     ![Select VCN](./images/14-select-vcn.png "Select VCN")
 
-3. On the **heatwave-vcn** page, under **Subnets**, click  **public subnet-heatwave-vcn**.
+3. On **mysql-vcn** page, click **Subnets**
+
+    ![Select Subnet](./images/17-mysql-vcn.png "Select Subnet")
+
+4. On the **heatwave-vcn** page, under **Subnets**, click  **public subnet-heatwave-vcn**.
 
     ![Select public subnet](./images/15-public-subnet.png "Select public subnet")
 
-4. Under **Security**, click **Default Security List for heatwave-vcn**.
+5. On the **public subnet-mysql-vcn** page, click **Security**.
+
+    ![Select public subnet](./images/19-public-subnet-security.png "Select public subnet")
+
+6. Under **Security**, click **Default Security List for heatwave-vcn**.
 
     ![Default security list](./images/16-default-security-list.png "Default security list")
 
-5. On **Default Security List for heatwave-vcn** page, under **Ingress Rules**, click **Add Ingress Rules**.
+7. Under **Security**, click **Security Rules**.
+
+    ![Default Security Rules](./images/21-default-security-list.png "Default Security Rules")
+
+8. On **Default Security List for heatwave-vcn** page, under **Ingress Rules**, click **Add Ingress Rules**.
 
     ![Add ingress rules in default security list](./images/17-add-ingress-rules-default-security-list.png "Add ingress rules in default security list")
 
-6. On **Add Ingress Rules** panel, enter the following, and click **Add Ingress Rules**:
+9. On **Add Ingress Rules** panel, enter the following, and click **Add Ingress Rules**:
 
     **Source CIDR**:
 
@@ -152,7 +168,7 @@ In this lab, you will be guided through the following tasks:
 
     ![Ingress rules](./images/18-enter-ingess-rules-default-security-list.png "Ingress rules") 
 
-7. On **Default Security List for heatwave-vcn** page, the new ingress rules are shown under **Ingress Rules**.
+10. On **Default Security List for heatwave-vcn** page, the new ingress rules are shown under **Ingress Rules**.
 
     ![New ingress rules](./images/19-new-ingress-rules-default-security-list.png "New ingress rules")
 

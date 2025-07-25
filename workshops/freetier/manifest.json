@@ -34,17 +34,12 @@
           },
 
           {
-            "title": "Lab 5: (Bonus) Create a Compute instance ",
-            "filename": "../../create-compute/create-compute.md"
-          },
-
-          {
-            "title": "Lab 6: (Bonus) Build a LAMP application with MySQL HeatWave",
+            "title": "Lab 5: (Bonus) Build a LAMP application with MySQL HeatWave",
             "filename": "../../create-lamp/create-lamp.md"
           },
         
           {
-            "title": "Lab 7: Stop OCI Services",
+            "title": "Lab 6: Stop OCI Services",
             "filename": "../../stop-services/stop-services.md"
           },
 

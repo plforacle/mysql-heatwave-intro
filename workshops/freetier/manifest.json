@@ -19,7 +19,7 @@
           },
   
           {
-            "title": "Lab 2: Connect to MySQL HeatWave With Cloud Shell Private Access and OCI Shell",
+            "title": "Lab 2: Connect to MySQL HeatWave With Cloud Shell and load data",
             "filename": "../../connect-dbs-ocishell-mysqlshell/connect-dbs-ocishell-mysqlshell.md"
           },
   

@@ -12,6 +12,7 @@ _Estimated Lab Time:_ 10 minutes
 
 In this lab, you will be guided through the following tasks:
 
+- Review the new HeatWave database
 - Connect to Cloud Shell
 - Setup Cloud Shell Private Access
 - Use MySQL Shell to Connect to your Heatwave Database
@@ -22,7 +23,34 @@ In this lab, you will be guided through the following tasks:
 - Some Experience with MySQL Shell
 - Must Complete Lab 1
 
-## Task 1: Access Cloud Shell via the Console
+## Task 1: Review the new HeatWave database
+
+1. Click on the Main Console Menu
+    ![Show main menu](./images/main-menu.png "Show main menu")
+
+2. Click on the **Databases sub menu**
+    ![Show main menu](./images/db-menu.png "Show main menu")
+
+3. Click on the new **heatwave-db** link
+    ![Show main menu](./images/heatwave-db.png "Show main menu")
+
+4. The new Heatwave system will appear. State **ACTIVE** indicates that the DB system is ready for use.
+
+    ![Show active state](./images/dbs-active.png "Show active state")
+
+5. In the **Connections** tab, save the **Private IP address** of the DB system, which is the HeatWave endpoint.
+
+    ![Heatwave endpoint](./images/heatwave-endpoint.png "Heatwave endpoint")
+
+6. Click the **HeatWave cluster details** link to review the HeatWave cluster information.
+
+    ![Heatwave cluster](./images/heatwave-cluster.png "Heatwave cluster")
+
+7. The HeatWave cluster should be ready for use.
+
+    ![Heatwave cluster details](./images/heatwave-cluster-details.png "Heatwave cluster details")
+
+## Task 2: Access Cloud Shell via the Console
 
 1. Login to the OCI Console.
 2. Click the Cloud Shell icon in the Console header. Note that the OCI CLI running in the Cloud Shell will execute commands against the region selected in the Console's Region selection menu when the Cloud Shell was started.
@@ -35,7 +63,7 @@ In this lab, you will be guided through the following tasks:
 
     You can use the icons in the upper right corner of the Cloud Shell window to minimize, maximize, restart, and close your Cloud Shell session.
 
-## Task 2: Setup Cloud Shell Private Access
+## Task 3: Setup Cloud Shell Private Access
 
 1. To change the network your Cloud Shell session is using to the HeatWave Database network, use the drop-down Network menu at the top of the Cloud Shell terminal window:
 
@@ -59,7 +87,7 @@ In this lab, you will be guided through the following tasks:
 
     ![cloud shell private network details](./images/cloud_shell_private_network_details.png "cloud shell private network details")
 
-## Task 3: Install airportdb sample data
+## Task 4: Install airportdb sample data
 
 The installation procedure involves downloading the airportdb database to cloud shell and importing the data from cloud shell into the MySQL DB System using the MySQL Shell Dump Loading utility. For information about this utility, see Dump Loading Utility: [https://dev.mysql.com/doc/mysql-shell/8.0/en/mysql-shell-utilities-load-dump.htmly](https://dev.mysql.com/doc/mysql-shell/8.0/en/mysql-shell-utilities-load-dump.html)
 
@@ -74,7 +102,7 @@ The installation procedure involves downloading the airportdb database to cloud 
     ```bash
     <copy>wget https://objectstorage.us-ashburn-1.oraclecloud.com/p/MdFkX2s2_x9Miktl08UoorNTIyE-bIULjDXcbYuU1ukSfw1g48AEUkmH0-UcN5bQ/n/idazzjlcjqzj/b/irportdb-bucket-20230123-2124/o/airportdb_ysqlsh_331.zip</copy>
     ```
-  
+
     b. Unzip sample file
 
     ```bash

@@ -264,14 +264,6 @@ In this lab, you will be guided through the following tasks:
 
     ![Show creating state](./images/33-dbs-creating.png "Show creating state")
 
-13. The new DB system will be ready to use after a few minutes. The state **ACTIVE** indicates that the DB system is ready for use.
-
-    ![Show active state](./images/34-dbs-active.png "Show active state")
-
-14. In the **Connections** tab, save the **Private IP address** of the DB system, which is the HeatWave endpoint.
-
-    ![Heatwave endpoint](./images/35-heatwave-endpoint.png "Heatwave endpoint")
-
 You may now **proceed to the next lab**.
 
 ## Learn More

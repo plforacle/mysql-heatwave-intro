@@ -24,32 +24,27 @@
           },
   
           {
-              "title": "Lab 3: Load HeatWave cluster",
-              "filename": "../../load-heatwave/load-heatwave.md"
-          },
-          
-          {
-              "title": "Lab 4: Run Queries in HeatWave and MySQL ",
+              "title": "Lab 3: Run Queries in HeatWave and MySQL ",
               "filename": "../../run-queries/run-queries.md"
           },
         
           {
-            "title": "Lab 5:  (Bonus) Build a real-time dashboard in Oracle Analytics Cloud with MySQL HeatWave",
+            "title": "Lab 4:  (Bonus) Build a real-time dashboard in Oracle Analytics Cloud with MySQL HeatWave",
             "filename": "../../do-oac/do-oac.md"
           },
 
           {
-            "title": "Lab 6: (Bonus) Create a Compute instance ",
+            "title": "Lab 5: (Bonus) Create a Compute instance ",
             "filename": "../../create-compute/create-compute.md"
           },
 
           {
-            "title": "Lab 7: (Bonus) Build a LAMP application with MySQL HeatWave",
+            "title": "Lab 6: (Bonus) Build a LAMP application with MySQL HeatWave",
             "filename": "../../create-lamp/create-lamp.md"
           },
         
           {
-            "title": "Lab7: Stop OCI Services",
+            "title": "Lab 7: Stop OCI Services",
             "filename": "../../stop-services/stop-services.md"
           },
 

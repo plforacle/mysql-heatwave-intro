@@ -18,7 +18,7 @@ In this lab, you will be guided through the following tasks:
 
 - An Oracle Trial or Paid Cloud Account
 - Some Experience with MySQL Shell
-- Completed Task 3
+- Completed Task 2
 
 ## Task 1: Run Queries in HeatWave
 
@@ -235,6 +235,16 @@ In this lab, you will be guided through the following tasks:
     ```bash
     <copy>SET SESSION use_secondary_engine=ON;</copy>
     ```
+
+16. Exit MySQL
+
+    ```bash
+    <copy>\q</copy>
+    ```
+
+17. Exit OCI cloud shell
+    ![query compare](./images/heatwave-qeury-avg.png " query compare")
+
 
 ## Learn More
 

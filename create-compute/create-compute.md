@@ -20,7 +20,7 @@ In this lab, you will be guided through the following tasks:
 
 ### Prerequisites
 
-- You have completed Lab 2.
+- You have completed Lab 4.
 
 ## Task 1: Create a Compute Instance
 
@@ -30,17 +30,17 @@ You need a compute instance to connect to the HeatWave instance.
   
     ![Click compute](./images/click-compute.png "Click compute")
 
-2. Ensure **heatwave-genai** compartment is selected, and click **Create instance**. 
+2. Ensure **turbo** compartment is selected, and click **Create instance**. 
 
      ![Create instance](./images/create-instance.png "Create instance")
 
 3. On **Create compute instance** page, enter the name of the compute instance.
 
     ```bash
-    <copy>heatwave-genai-compute</copy>
+    <copy>heatwave-compute</copy>
     ```
 
-4. Ensure **heatwave-genai** compartment is selected.
+4. Ensure **turbo** compartment is selected.
 
     ![Compute instance name](./images/compute-name.png "Compute instance name")
 
@@ -54,15 +54,15 @@ You need a compute instance to connect to the HeatWave instance.
 
 8. Under **Networking** panel, in **Primary network** field, select **Select existing virtual cloud network**, and ensure the following settings are selected:
 
-    - **Virtual cloud network compartment**: **heatwave-genai**
+    - **Virtual cloud network compartment**: **turbo**
 
-    - **Virtual cloud network**: **heatwave-genai-vcn**
+    - **Virtual cloud network**: **heatwave-vcn**
 
 9. Under **Subnet**, ensure the following are selected:
 
-    - **Subnet compartment**: **heatwave-genai**
+    - **Subnet compartment**: **turboi**
 
-    - **Subnet**: **public-subnet-heatwave-genai-vcn**
+    - **Subnet**: **public-subnet-heatwave-vcn**
 
 10. In **Primary VNIC IP addresses** field, ensure the following settings are selected:
 

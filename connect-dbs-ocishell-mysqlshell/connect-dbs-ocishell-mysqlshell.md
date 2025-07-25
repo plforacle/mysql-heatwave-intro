@@ -52,12 +52,11 @@ In this lab, you will be guided through the following tasks:
 
 ## Task 2: Access Cloud Shell via the Console
 
-1. Login to the OCI Console.
-2. Click the Cloud Shell icon in the Console header. Note that the OCI CLI running in the Cloud Shell will execute commands against the region selected in the Console's Region selection menu when the Cloud Shell was started.
+1. Click the Cloud Shell icon in the Console header. Note that the OCI CLI running in the Cloud Shell will execute commands against the region selected in the Console's Region selection menu when the Cloud Shell was started.
 
     ![cloudshell console button](./images/cloudshell-console-button.png "cloudshell console button")
 
-    This displays the Cloud Shell in a "drawer" at the bottom of the console:
+2. This displays the Cloud Shell in a "drawer" at the bottom of the console:
 
     ![cloudshell console drawer](./images/cloudshell-console-drawer.png "cloudshell console drawer")
 
@@ -73,17 +72,13 @@ In this lab, you will be guided through the following tasks:
 
     ![cloud shell private access vcn](./images/cloud_shell_private_access_dropdown_vcn.png "cloud shell private access vcn")
 
-3. Select the compartment that you want to use, and then select the VCN and the Subnet to use from the drop-down list boxes. You can also optionally select one or more Network Security groups to use.
+3. Select the VCN and the Subnet to use from the drop-down list boxes.
 
     ![cloud shell private network setup](./images/cloud_shell_private_network_setup.png "cloud shell private network setup")
 
-4. Click on the Connect to this network button to switch your Cloud Shell network connection to the HeatWave Database network.
+4. Click on the **Use as active network** button to switch your Cloud Shell network connection to the HeatWave Database network. Wait a few minutes for the connection to complete.
 
-    Your Cloud Shell session is now connected to your HeatWave private network, as indicated in the Networking drop-down at the top of the Cloud Shell terminal session:
-
-    ![cloud shell private network connected](./images/cloud_shell_private_network_connected.png "cloud shell private network connected")
-
-    You can see details about your private network connection by clicking the Details link.
+5. You can see details about your private network connection by clicking the Details link. Click the **Close** button to hide the details section
 
     ![cloud shell private network details](./images/cloud_shell_private_network_details.png "cloud shell private network details")
 
@@ -100,24 +95,26 @@ The installation procedure involves downloading the airportdb database to cloud 
     a. Get sample file
 
     ```bash
-    <copy>wget https://objectstorage.us-ashburn-1.oraclecloud.com/p/MdFkX2s2_x9Miktl08UoorNTIyE-bIULjDXcbYuU1ukSfw1g48AEUkmH0-UcN5bQ/n/idazzjlcjqzj/b/irportdb-bucket-20230123-2124/o/airportdb_ysqlsh_331.zip</copy>
+    <copy>wget https://objectstorage.us-ashburn-1.oraclecloud.com/p/9apiCx3kgtmGg6JpR62UzIK-licyuQLatZNJ_V_0Vv4iQFNiHZkdE_1pNvXbeker/n/mysqlpm/b/mysql_airport/o/airport-db.zip</copy>
     ```
 
     b. Unzip sample file
 
     ```bash
-    <copy>unzip airportdb_ysqlsh_331.zip</copy>
+    <copy>unzip airport-db.zip</copy>
     ```
+
+    ![Get airport-db](./images/get-airport-db.png "Get airport-db")
 
    **Connect to MySQL Database Service**
 
-2. From your cloud shell, connect to HEATWAVE-DB  using the MySQL Shell client tool.
+2. From your cloud shell, connect to **heatwave-db**  using the MySQL Shell client tool.
 
-   The endpoint (IP Address) can be found in your notepad or  the HEATWAVE-DB  System Details page, under the "Endpoint" "Private IP Address". 
+   Use the saved endpoint (IP Address). It  can be found in the **heatwave-db** System Details page. In the **Connection** tab, under the "Endpoint" "Private IP Address". 
 
-    ![mysql endpoint private ip](./images/mysql-endpoint-private-ip.png "mysql endpoint private ip")
+    ![Heatwave endpoint](./images/heatwave-endpoint.png "Heatwave endpoint")
 
-3. Use the following command to connect to MySQL using the MySQL Shell client tool. Be sure to add the MDS-HW private IP address at the end of the command. Also enter the admin user and the db password created on Lab 1
+3. Use the following command to connect to MySQL using the MySQL Shell client tool. Be sure to add the **heatwave-db** private IP address at the end of the command. Also enter the admin user and the db password created on Lab 1
 
     (Example  **mysqlsh -uadmin -p -h10.0.1..**)
 

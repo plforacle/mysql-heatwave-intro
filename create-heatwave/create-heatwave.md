@@ -184,15 +184,21 @@ In this lab, you will be guided through the following tasks:
 
 3. In the **Create DB system** panel, select **Development or testing**.
 
-4. Under **Create in compartment**, ensure **turbo** is selected, and enter a name for the DB system.
+4. Under **Create in compartment**, ensure **turbo** is selected, and enter a name and description for the DB system.
 
-  **Name**:
+    **Name**:
 
     ```bash
     <copy>heatwave-db</copy>
     ```
 
-5. Enter the administrator credentials. *Note* the administrator credentials as you will need them to connect to the DB system. 
+    **Description**:
+
+    ```bash
+    <copy>HeatWave Database Instance</copy>
+    ```
+
+5. Enter the administrator credentials. *Note* the administrator credentials as you will need them to connect to the DB system.
 
     ![HeatWave DB system details](./images/22-create-dbs-admin.png "HeatWave DB system details")
 
@@ -202,37 +208,51 @@ In this lab, you will be guided through the following tasks:
 
 7. Let the **Configure placement** settings remain as is.
 
-8. Under **Configure hardware**, select **Enable HeatWave cluster**, and click **Change shape**.
+    <!-- 8. Under **Configure hardware**, select **Enable HeatWave cluster**, and click **Change shape**. 
+           ![Change shape](./images/24-change-shape.png "Change shape")
+    -->
 
-   ![Change shape](./images/24-change-shape.png "Change shape")
+8. Let the  **Configure hardware** settings remain as is.
 
-9. In the **Browse all shapes** page, ensure the compute model is **ECPU**, select **MySQL.32** shape, and click **Select a shape**. The ECPU Shape of the DB system must be MySQL.32.
+    **Keep Shape**
+       ![Keep shape](./images/24-keep-shape.png "Keep shape")
+
+    **Keep HeatWave cluster**.
+       ![Keep cluster](./images/24-keep-cluster.png "Keep cluster")
+
+
+    <!-- 9. In the **Browse all shapes** page, ensure the compute model is **ECPU**, select **MySQL.32** shape, and click **Select a shape**. The ECPU Shape of the DB system must be MySQL.32.
 
     ![Select MySQL.32 shape](./images/25-select-mysql-32.png "Select MySQL.32 shape")
 
-10. Click **Configure HeatWave cluster**.
+    10. Click **Configure HeatWave cluster**.
 
-    ![Configure HeatWave cluster](./images/26-configure-heatwave-cluster.png "Configure HeatWave cluster")
+        ![Configure HeatWave cluster](./images/26-configure-heatwave-cluster.png "Configure HeatWave cluster")
 
-11. In **Configure HeatWave cluster** page, click **Change shape**.
+    11. In **Configure HeatWave cluster** page, click **Change shape**.
 
-    ![Change HeatWave shape](./images/27-change-heatwave-shape.png "Change Heatwave shape")
+        ![Change HeatWave shape](./images/27-change-heatwave-shape.png "Change Heatwave shape")
 
-12. In the **Browse all shapes** page, select **HeatWave.512** shape, and click **Select a shape**. The HeatWave Shape must be HeatWave.512.
+    12. In the **Browse all shapes** page, select **HeatWave.512** shape, and click **Select a shape**. The HeatWave Shape must be HeatWave.512.
 
-    ![Change HeatWave shape](./images/28-select-heatwave-512.png "Change Heatwave shape")
+        ![Change HeatWave shape](./images/28-select-heatwave-512.png "Change Heatwave shape")
 
-13. Select **HeatWave Lakehouse**, and click **Save changes**. HeatWave Lakehouse must be enabled on the DB system.
+    13. Select **HeatWave Lakehouse**, and click **Save changes**. HeatWave Lakehouse must be enabled on the DB system.
 
-    ![Enable Lakehouse](./images/29-enable-lakehouse.png "Enable Lakehouse")
+        ![Enable Lakehouse](./images/29-enable-lakehouse.png "Enable Lakehouse")
 
-14. Click **Show advanced options**.
+    -->
 
-15. Go to the **Configuration** tab, and under **Database version**, select version **9.0.0 - Innovation** or higher version.
+9. Disable backup by turning off the **Enable automatic backups** button and Click **Show advanced options**.
+    ![Setup Backup Advanced](./images/24-backup-advanced.png "Setup Backup Advanced")
+
+
+
+11. Go to the **Configuration** tab, and under **Database version**, select version **9.0.0 - Innovation** or higher version.
 
     ![Select database innovation version](./images/31-innovation-version.png "Select database innovation version")
 
-16. Go to the **Connections** tab, enter the **Hostname**, which is same as DB system name, and click **Create**:
+12. Go to the **Connections** tab, enter the **Hostname**, which is same as DB system name, and click **Create**:
 
     **Hostname**:
 
@@ -242,15 +262,15 @@ In this lab, you will be guided through the following tasks:
 
     ![HeatWave hostname](./images/32-heatwave-hostname.png "HeatWave hostname")
 
-17.  While the DB system is created, the state is shown as **CREATING**.
+13. While the DB system is created, the state is shown as **CREATING**.
 
     ![Show creating state](./images/33-dbs-creating.png "Show creating state")
 
-18. The new DB system will be ready to use after a few minutes. The state **ACTIVE** indicates that the DB system is ready for use. 
+14. The new DB system will be ready to use after a few minutes. The state **ACTIVE** indicates that the DB system is ready for use.
 
     ![Show active state](./images/34-dbs-active.png "Show active state")
 
-19. In the **Connections** tab, note the **Private IP address** of the DB system, which is the HeatWave endpoint.
+15. In the **Connections** tab, note the **Private IP address** of the DB system, which is the HeatWave endpoint.
 
     ![Heatwave endpoint](./images/35-heatwave-endpoint.png "Heatwave endpoint")
 

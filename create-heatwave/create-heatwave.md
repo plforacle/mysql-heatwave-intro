@@ -208,7 +208,7 @@ In this lab, you will be guided through the following tasks:
 
 7. Let the **Configure placement** settings remain as is.
 
-    <!-- 8. Under **Configure hardware**, select **Enable HeatWave cluster**, and click **Change shape**. 
+    <!-- 8. Under **Configure hardware**, select **Enable HeatWave cluster**, and click **Change shape**.
            ![Change shape](./images/24-change-shape.png "Change shape")
     -->
 
@@ -246,13 +246,11 @@ In this lab, you will be guided through the following tasks:
 9. Disable backup by turning off the **Enable automatic backups** button and Click **Show advanced options**.
     ![Setup Backup Advanced](./images/24-backup-advanced.png "Setup Backup Advanced")
 
-
-
-11. Go to the **Configuration** tab, and under **Database version**, select version **9.0.0 - Innovation** or higher version.
+10. Go to the **Configuration** tab, and under **Database version**, select version **9.0.0 - Innovation** or higher version.
 
     ![Select database innovation version](./images/31-innovation-version.png "Select database innovation version")
 
-12. Go to the **Connections** tab, enter the **Hostname**, which is same as DB system name, and click **Create**:
+11. Go to the **Connections** tab, enter the **Hostname**, which is same as DB system name, and click **Create**:
 
     **Hostname**:
 
@@ -262,15 +260,15 @@ In this lab, you will be guided through the following tasks:
 
     ![HeatWave hostname](./images/32-heatwave-hostname.png "HeatWave hostname")
 
-13. While the DB system is created, the state is shown as **CREATING**.
+12. While the DB system is created, the state is shown as **CREATING**.
 
     ![Show creating state](./images/33-dbs-creating.png "Show creating state")
 
-14. The new DB system will be ready to use after a few minutes. The state **ACTIVE** indicates that the DB system is ready for use.
+13. The new DB system will be ready to use after a few minutes. The state **ACTIVE** indicates that the DB system is ready for use.
 
     ![Show active state](./images/34-dbs-active.png "Show active state")
 
-15. In the **Connections** tab, note the **Private IP address** of the DB system, which is the HeatWave endpoint.
+14. In the **Connections** tab, save the **Private IP address** of the DB system, which is the HeatWave endpoint.
 
     ![Heatwave endpoint](./images/35-heatwave-endpoint.png "Heatwave endpoint")
 
@@ -288,4 +286,4 @@ You may now **proceed to the next lab**.
 
 - **Author** - Aijaz Fatima, Product Manager
 - **Contributors** - Mandy Pang, Senior Principal Product Manager
-- **Last Updated By/Date** - Aijaz Fatima, Product Manager, August 2024
+- **Last Updated By/Date** - Aijaz Fatima, Product Manager, July 2025

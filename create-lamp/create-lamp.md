@@ -123,25 +123,41 @@ You will need a compute Instance to connect to your brand new MySQL database.
 
 9. In the **Placement** field, keep the selected **Availability domain**.
 
-10. In the **Image and Shape** field, keep the selected image, **Oracle Linux 9**, and the default shape, and click **Next**.
+10. In the **Image and Shape** field, keep the default shape.
 
-    ![Compute image and shape](./images/compute-image-shape.png "Compute image and shape")
+    Click the **Change Image** button to selected image, **Oracle Linux 8**.
+    ![Change Image Button](./images/compute-image-change-button.png "Change Image Button")
 
-11. Under **Security** panel, click **Next**.
+11. In the **Select Image Screen** do the followings:
+    1. Click the **Oracle Linux Box**
+    2. Enter the following in the search box:
 
-12. Under **Networking** panel, in **Primary network** field, select **Select existing virtual cloud network**, and ensure the following settings are selected:
+        ```bash
+        <copy>Oracle Linux 8</copy>
+        ```
+
+    3. Select the **Oracle Linux 8** entry
+    4. Click the **Select Image** button
+        ![Compute image and shape change](./images/compute-image-change.png "Compute image and shape change")
+
+12. In the final **Image and Shape** field, keep the default shape and the new **Oracle Linux 8** image , and click **Next**.
+   ![New Compute image and shape](./images/compute-image-shape.png "New Compute image and shape")
+
+13. Under **Security** panel, click **Next**.
+
+14. Under **Networking** panel, in **Primary network** field, select **Select existing virtual cloud network**, and ensure the following settings are selected:
 
     - **Virtual cloud network compartment**: **turbo**
 
     - **Virtual cloud network**: **heatwave-vcn**
 
-13. Under **Subnet**, ensure the following are selected:
+15. Under **Subnet**, ensure the following are selected:
 
     - **Subnet compartment**: **turbo**
 
     - **Subnet**: **public-subnet-heatwave-vcn**
 
-14. In **Primary VNIC IP addresses** field, ensure the following settings are selected:
+16. In **Primary VNIC IP addresses** field, ensure the following settings are selected:
 
     - **Private IPv4 address**: **Automatically assign private IPv4 address**
 
@@ -149,17 +165,17 @@ You will need a compute Instance to connect to your brand new MySQL database.
 
     ![Network settings](./images/networking.png "Network settings")
 
-15. On Add SSH keys, paste the public key from the notepad.
+17. On Add SSH keys, paste the public key from the notepad.
 
     ![compute create add ssh key](./images/compute-create-add-ssh-key.png "compute create add ssh key ")
 
-16. Click **Next**, and then **Next**.
+18. Click **Next**, and then **Next**.
 
-17. Click **Create** to create your compute instance.
+19. Click **Create** to create your compute instance.
 
-18. The compute instance will be ready to use after a few minutes. The state is shown as **Provisioning** while the instance is creating.
+20. The compute instance will be ready to use after a few minutes. The state is shown as **Provisioning** while the instance is creating.
 
-19. When the compute instance is ready to use, the state is shown as **Running**. *Note* the **Public IP address** and the **Username**.
+21. When the compute instance is ready to use, the state is shown as **Running**. *Note* the **Public IP address** and the **Username**.
 
     ![Compute instance is created](./images/compute.png "Compute instance is created")
 

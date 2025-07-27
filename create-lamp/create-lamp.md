@@ -321,7 +321,7 @@ You will need a compute Instance to connect to your brand new MySQL database.
     a. Install php:7.4
 
     ```bash
-    <copy> sudo dnf module install php:7.4 -y</copy>
+    <copy> sudo dnf install @php:8.2 -y</copy>
     ```
 
     b. Install associated php libraries
@@ -420,41 +420,58 @@ You will need a compute Instance to connect to your brand new MySQL database.
 
 5. Add the following code to the editor and save the file (ctr + o) (ctl + x)
 
-    ```bash
-    <copy><?php
-    require_once "config.php";
-    $query = "select firstname, lastname, count(booking.passenger_id) as count_bookings from passenger, booking
-    where booking.passenger_id = passenger.passenger_id
-    and passenger.lastname = 'Aldrin' or (passenger.firstname = 'Neil' and passenger.lastname = 'Armstrong')
-    and booking.price > 400.00 group by firstname, lastname;";
-    if ($stmt = $link->prepare($query)) {
+```bash
+<copy><?php
+require_once "config.php";
+
+$query = "SELECT firstname, lastname, COUNT(booking.passenger_id) as count_bookings 
+          FROM passenger, booking 
+          WHERE booking.passenger_id = passenger.passenger_id 
+          AND (passenger.lastname = ? OR (passenger.firstname = ? AND passenger.lastname = ?)) 
+          AND booking.price > ? 
+          GROUP BY firstname, lastname;";
+
+if ($stmt = $link->prepare($query)) {
+    $lastname = 'Aldrin';
+    $firstname = 'Neil';
+    $lastnameArmstrong = 'Armstrong';
+    $price = 400.00;
+    $stmt->bind_param("sssd", $lastname, $firstname, $lastnameArmstrong, $price);
     $stmt->execute();
-    $stmt->bind_result($firstname,$lastname,$count_bookings);
-    echo "<table>";
-            echo "<tr>";
-            echo "<th>Firstname</th>";
-            echo "<th>Lastname</th>";
-            echo "<th>Count</th>";
+    $result = $stmt->get_result();
+
+    if ($result->num_rows > 0) {
+        echo "<table>";
+        echo "<tr>";
+        echo "<th>Firstname</th>";
+        echo "<th>Lastname</th>";
+        echo "<th>Count</th>";
         echo "</tr>";
 
-        while ($stmt->fetch()) {
+        while ($row = $result->fetch_assoc()) {
             echo "<tr>";
-            echo "<td>" . $firstname ."</td>";
-            echo "<td>" . $lastname . "</td>";
-            echo "<td>" . $count_bookings . "</td>";
+            echo "<td>" . $row['firstname'] . "</td>";
+            echo "<td>" . $row['lastname'] . "</td>";
+            echo "<td>" . $row['count_bookings'] . "</td>";
             echo "</tr>";
         }
 
-        $stmt->close();
+        echo "</table>";
+    } else {
+        echo "No results found.";
     }
-    ?>
 
-    </copy>
-    ```
+    $stmt->close();
+} else {
+    echo "Failed to prepare the query.";
+}
+?>
+</copy>
+```
 
 6. From your local  machine connect to dbtest.php
 
-    Example: http://129.213.167..../dbtest.php  
+    Example: http://129.213.167..../dbtest.php 
 
 ## Task 7: Create Google Chart Application
 
